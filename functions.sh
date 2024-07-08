@@ -9,19 +9,19 @@ reboot_required () {
 }
 
 apt () {
-    apt-get -qq "$@"
+  apt-get -qq "$@"
 }
 
 apt_assume_yes () {
-    apt -y "$@"
+  apt -y "$@"
 }
 
 apt_install () {
-    apt_assume_yes install "$@"
+  apt_assume_yes install "$@"
 }
 
 install_flatpak () {
-flatpak install -y --noninteractive flathub $1
+  flatpak install -y --noninteractive flathub $1
 }
 
 gsettings_get_dash_to_dock () {

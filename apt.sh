@@ -5,9 +5,8 @@ source ./functions.sh
 apt clean && apt update && apt_assume_yes dist-upgrade
 reboot_required
 
-apt_install solaar \
-	curl vim neovim ripgrep zsh \
-	build-essential vainfo gparted \
+apt_install solaar dconf-editor \
+	curl vim neovim ripgrep zsh build-essential vainfo gparted \
 	ca-certificates mesa-vdpau-drivers mesa-va-drivers mesa-va-drivers \
 	unrar gnome-shell-extension-manager flatpak gnome-software-plugin-flatpak
 

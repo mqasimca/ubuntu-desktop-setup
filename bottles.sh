@@ -3,7 +3,7 @@
 b_name="Games"
 
 b_cli () {
-flatpak run --command=bottles-cli com.usebottles.bottles "$@"
+  flatpak run --command=bottles-cli com.usebottles.bottles "$@"
 }
 
 b_cli list bottles -f environment:gaming | grep $b_name
