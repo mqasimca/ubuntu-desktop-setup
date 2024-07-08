@@ -1,22 +1,16 @@
 #!/bin/bash
 
-## Dock settings
-if [[ $(gsettings get org.gnome.shell.extensions.dash-to-dock unity-backlit-items) == "true" ]]; then
-  gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
-fi
+dir=$(pwd)
+source ./functions.sh
 
-if [[ $(gsettings get org.gnome.shell.extensions.dash-to-dock dock-position) != "'BOTTOM'" ]]; then
-  gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
-fi
+# APT packages
+sudo -s source $dir/apt.sh
 
-if [[ $(gsettings get org.gnome.shell.extensions.dash-to-dock transparency-mode) != "'FIXED'" ]]; then
-  gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
-fi
+# Flatpak packages
+sudo -s source $dir/flatpak.sh
 
-if [[ $(gsettings get org.gnome.shell.extensions.dash-to-dock dash-max-icon-size) != 64 ]]; then
-  gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 64
-fi
+# Dock Setup
+source $dir/dock.sh
 
-if [[ $(gsettings get org.gnome.shell.extensions.dash-to-dock unity-backlit-items) == "true" ]]; then
-  gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items false
-fi
+# Setup Bottles
+source $dir/bottles.sh
