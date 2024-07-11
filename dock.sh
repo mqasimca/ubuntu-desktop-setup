@@ -22,3 +22,7 @@ fi
 if [[ $(gsettings_get_dash_to_dock unity-backlit-items) == "true" ]]; then
   gsettings_set_dash_to_dock unity-backlit-items false
 fi
+
+if [[ $(gsettings_get_dash_to_dock click-action) != "'minimize'" ]]; then
+  gsettings_set_dash_to_dock click-action minimize
+fi
