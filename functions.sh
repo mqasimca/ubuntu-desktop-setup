@@ -21,7 +21,7 @@ apt_install () {
 }
 
 install_flatpak () {
-  flatpak install -y --noninteractive flathub $1
+  flatpak install -y --noninteractive "$@"
 }
 
 gsettings_get_dash_to_dock () {

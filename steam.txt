@@ -1,0 +1,2 @@
+
+sh -c `pid=$(pidof Generals.exe); WINEFSYNC=1 WINEPREFIX=$(perl -ne 'print "$1" if /WINEPREFIX=([^\0]+)/' /proc/$pid/environ) "$(dirname "$(readlink -f /proc/$pid/exe)")"/wine ~/.local/share/Steam/steamapps/compatdata/2732960/pfx/drive_c/Program\ Files/Cheat\ Engine*/Cheat\ Engine.exe ~/Downloads/generals_zero_hour.CT`
