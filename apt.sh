@@ -11,7 +11,8 @@ apt_install solaar dconf-editor \
 	mesa-va-drivers mesa-va-drivers unrar gnome-shell-extension-manager \
 	flatpak gnome-software-plugin-flatpak xdotool build-essential qemu-kvm \
 	libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon \
-	virt-top libguestfs-tools libosinfo-bin qemu-system tuned virt-manager virt-viewer wget gpg apt-transport-https
+	virt-top libguestfs-tools libosinfo-bin qemu-system tuned virt-manager virt-viewer wget \
+	gpg apt-transport-https steam-devices
 
 # Setup flatpak
 if ! [[ $(grep flathub /var/lib/flatpak/repo/config >/dev/null) ]]; then

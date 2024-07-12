@@ -17,15 +17,8 @@ if ! [[ $(dconf list /org/gnome/terminal/legacy/profiles:/ | grep b1dcc9dd-5262-
   dconf list /org/gnome/terminal/legacy/profiles:/
 fi
 
-
-# Flatpak packages
-source $dir/flatpak.sh
-
 # Dock Setup
 source $dir/dock.sh
-
-# Setup Bottles
-source $dir/bottles.sh
 
 # KVM https://linux.how2shout.com/how-to-install-kvm-qemu-on-ubuntu-24-04-lts-server-linux/
 sudo usermod -aG libvirt $(whoami) && sudo usermod -aG kvm $(whoami)
@@ -33,10 +26,8 @@ sudo systemctl enable --now libvirtd
 sudo systemctl enable --now libvirtd
 sudo setfacl -m d:u:$USER:rwx /var/lib/libvirt/images
 
-# Steam
-
-# SteamTinkerLaunch
-git clone
-cd steamtinkerlaunch
-sudo make install
-steamtinkerlaunch yad ai
+# Snap packages
+sudo snap refresh
+sudo snap install go --classic
+sudo snap install rustup --classic
+sudo snap kubectl rustup --classic
