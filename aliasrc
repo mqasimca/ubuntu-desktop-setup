@@ -1,0 +1,1 @@
+alias UpdateSystem="echo \"Starting APT Update\" && echo \"---------------\" && sudo apt-get clean && sudo apt-get update && sudo apt-get dist-upgrade && echo \"\" && echo \"Updating Snap packages\" && echo \"---------------\" && sudo snap refresh && echo \"\" && echo \"Updating Flatpak packages\" && echo \"---------------\" && flatpak update" 

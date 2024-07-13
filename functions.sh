@@ -1,3 +1,4 @@
+#!/bin/bash
 
 reboot_required () {
   if [ -f /var/run/reboot-required ]; then
