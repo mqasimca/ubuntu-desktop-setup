@@ -32,8 +32,3 @@ if ! dconf list /org/gnome/terminal/legacy/profiles:/ | grep -q b1dcc9dd-5262-4d
   dconf load /org/gnome/terminal/legacy/profiles:/ < terminalProfiles.dconf
   dconf list /org/gnome/terminal/legacy/profiles:/
 fi
-
-if ! grep -q starship ~/.bashrc; then
-  curl -sS https://starship.rs/install.sh | sh -s -- -y
-  echo "eval \"$(starship init bash)\"" >> ~/.bashrc
-fi
