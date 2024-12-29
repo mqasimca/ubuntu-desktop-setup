@@ -32,3 +32,5 @@ if ! dconf list /org/gnome/terminal/legacy/profiles:/ | grep -q b1dcc9dd-5262-4d
   dconf load /org/gnome/terminal/legacy/profiles:/ < terminalProfiles.dconf
   dconf list /org/gnome/terminal/legacy/profiles:/
 fi
+
+gsettings set org.gnome.mutter check-alive-timeout 60000
